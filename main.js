@@ -50,6 +50,8 @@ function botVoice(message) {
     speech.volume = 1;
     speech.rate = 1;
     speech.pitch = 1;
+    //Added 1 Line
+    speech.voice = window.speechSynthesis.getVoices()[3]
     window.speechSynthesis.speak(speech);
     var element = document.getElementById("container");
     element.appendChild(addBotText(speech.text));
